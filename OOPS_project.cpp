@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Hi GUYS i hope we will make this project number one
 //Online Shopping System
 #include <sstream>
@@ -37,6 +36,4 @@ int main(){
     
     return 0;
 }
-=======
 // Hi GUYS i hope we will make this project number one
->>>>>>> e4e2b3c72a3c3bc174cfd370c7be6719e65c2529
