@@ -1,5 +1,3 @@
-// Hi GUYS i hope we will make this project number one
-//Online Shopping System
 #include <sstream>
 #include <iostream>
 #include <string>
@@ -16,24 +14,122 @@
 #include <utility>
 #include <queue>
 using namespace std;
-typedef long long ll;
-typedef vector<int> vi;
-typedef pair<int,int> pi;
-#define F first
-#define S second
-#define PB push_back
-#define MP make_pair
-const int mod=1e9+7;
-#define rep(i,a,b) for (int i = a; i < b; i++)
-#define  vec vector<ll>
-#define  Sort(a) sort(a.begin(),a.end())
 
+class Address
+{
+    string block, houseName, city, zip;
 
+public:
+    Address(string block, string houseName, string city, string zip)
+    {
+        this->block = block;
+        this->houseName = houseName;
+        this->city = city;
+        this->zip = zip;
+    }
 
-int main(){
+    void setFullAddress()
+    {
+        cout << "ENTER YOUR BLOCK NO.     :";
+        cin >> this->block;
+        cin.ignore();
+        cout << "ENTER YOUR HOUSE NAME    :";
+        getline(cin, this->houseName);
+        cout << "ENTER YOUR CITY NAME     :";
+        getline(cin, this->city);
+        cout << "ENTER YOUR POST CODE     :";
+        cin >> this->zip;
+    }
 
+    string getFullAddress()
+    {
+        return block + ", " + houseName + ", " + city + ", " + zip;
+    }
+};
 
-    
+class Payment
+{
+    double payNetAmount;
+    string cardNumber, digit, ibankingUserID, ibankingUserPassword;
+    int pinNumber, payment;
+
+public:
+    Payment(double payNetAmount, string cardNumber, int pinNumber, string ibankingUserID, string ibankingUserPassword)
+    {
+        this->payNetAmount = payNetAmount;
+        this->cardNumber = cardNumber;
+        this->pinNumber = pinNumber;
+        this->ibankingUserID = ibankingUserID;
+        this->ibankingUserPassword = ibankingUserPassword;
+    }
+
+    void setNetPayAmount(double amount)
+    {
+        this->payNetAmount = amount;
+    }
+
+    double getNetPayAmount()
+    {
+        return payNetAmount;
+    }
+
+    void setCardNumber(string cardNumber)
+    {
+        this->cardNumber = cardNumber;
+    }
+
+    string getCardNumber()
+    {
+        return cardNumber;
+    }
+
+    void setPinNumber(int pinNumber)
+    {
+        this->pinNumber = pinNumber;
+    }
+
+    int getPinNumber()
+    {
+        return pinNumber;
+    }
+
+    void setBankingUserID(string ibankingUserID)
+    {
+        this->ibankingUserID = ibankingUserID;
+    }
+
+    string getBankingUserID()
+    {
+        return ibankingUserID;
+    }
+
+    void setBankingUserPassword(string ibankingUserPassword)
+    {
+        this->ibankingUserPassword = ibankingUserPassword;
+    }
+
+    string getBankingUserPassword()
+    {
+        return ibankingUserPassword;
+    }
+
+    string getDigit()
+    {
+        return digit;
+    }
+
+    int getPayment()
+    {
+        return payment;
+    }
+};
+
+int main()
+{
+
+    Address a = Address("aa", "bb", "cc", "dd");
+    // a.setFullAddress();
+    cout << a.getFullAddress() << endl;
+
     return 0;
 }
-// Hi GUYS i hope we will make this project number one
