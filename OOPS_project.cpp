@@ -2,9 +2,11 @@
 using namespace std;
 class Address
 {
+protected:
     string block, houseName, city, zip;
 
 public:
+Address(){};
     Address(string block, string houseName, string city, string zip)
     {
         this->block = block;
@@ -108,13 +110,109 @@ public:
         return payment;
     }
 };
+class Register
+{
+     Address d;
+private:
+    string Username, Password, Email, Phone, Gender, Hashcode, Userid;
+   
+
+public:
+     Register(){
+
+     }
+    void setUsername(string name)
+    {
+        this->Username = name;
+    }
+    void setGender(string gender)
+    {
+        this->Gender = gender;
+    }
+    void setEmail(string email)
+    {
+        this->Email = email;
+    }
+    void setPhone(string phone)
+    {
+        this->Phone = phone;
+    }
+    void setAddress()
+    {
+        d.setFullAddress();
+    }
+    void setUserid(string userid)
+    {
+        this->Userid = userid;
+    }
+    string getUsername()
+    {
+        return Username;
+    }
+    string getGender()
+    {
+        return Gender;
+    }
+
+    string getEmail()
+    {
+        return Email;
+    }
+    void getAddress()
+    {
+        d.getFullAddress();
+    }
+    void SignUp(){
+        int num;
+        cout<<"WELCOME TO ZEPY SHOP\n";
+        cout<<"Enter 1 to SignUp or 2 to Login\n";
+          cin>>num;
+          cin.ignore();
+          if(num==1){
+                cout << "ENTER YOUR USER NAME    :"<<endl;
+            getline(cin,Username);
+            cout << "ENTER YOUR PASSWORD     :"<<endl;  
+            getline(cin,Password);  
+            cout << "ENTER YOUR EMAIL        :"<<endl;
+            getline(cin,Email);
+            cout << "ENTER YOUR PHONE NUMBER :"<<endl;
+            getline(cin,Phone);
+    
+          }else{
+               Login();
+          }
+    }
+      
+    void Login(){
+
+        string ChkUsername, ChkPassword;
+        cout<<"Login Portal\n";
+        cout << "ENTER YOUR USER NAME    :"<<endl;
+            getline(cin,ChkUsername);
+            cout << "ENTER YOUR PASSWORD     :"<<endl;  
+            getline(cin,ChkPassword);
+
+            if(Username==ChkUsername && Password==ChkPassword){
+                cout << "LOGIN SUCCESSFULLY"<<endl;
+            }
+            else{
+                cout << "LOGIN FAILED"<<endl;
+            }
+
+
+
+
+
+    }
+};
 
 int main()
 {
 
-    Address a = Address("aa", "bb", "cc", "dd");
-    // a.setFullAddress();
-    cout << a.getFullAddress() << endl;
+    Register r;
+    r.SignUp();
+    r.Login();
+
 
     return 0;
 }
