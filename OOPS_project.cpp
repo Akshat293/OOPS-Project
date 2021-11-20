@@ -4,12 +4,28 @@
 using namespace std;
 vector<pair<string,string> >AdminDetails;
 map<string,vector<string > >Productlist;
-int ProductIdCount=1;
-string ProductOriginId="P2021"; // to assign unique id to each product
+int ProductIdCount=0;
+string ProductOriginId="P20210"; // to assign unique id to each product
+string Catg[]={"Electronics","Fashion","Food","Books","Sports","Others","Clothes","Shoes","Accessories"};
+int n=1000;
 void GenerateProduct(int n)
 {
+     string ProductId,ProductPrice,ProductQuantity,ProductCategory,ProductDiscount;
     for(int i=0;i<n;i++){
-        
+        vector<string>Prod;
+         ProductId=ProductOriginId;
+         ProductId.append(to_string(ProductIdCount));
+         ProductIdCount++;
+         ProductPrice=to_string(rand()%1000);
+         ProductQuantity=to_string(rand()%100);
+         ProductCategory=Catg[rand()%9];
+         ProductDiscount=to_string(rand()%100);
+            Prod.push_back(ProductPrice);
+            Prod.push_back(ProductQuantity);
+            Prod.push_back(ProductCategory);
+            Prod.push_back(ProductDiscount);
+            Productlist[ProductId]=Prod;
+          
     }
 
 }
@@ -289,11 +305,12 @@ public:
     void PrintProductlist(){
         cout<<"--------------------------------------\n";
         cout<<"Available Products In The Store"<<endl;
-        cout<<" | Product Id | Price | Quantity | Category | Discount(%) |"<<endl;
+        cout<<"  | Product Id | Price | Quantity |  Category       | Discount(%)|"<<endl;
     cout<<"--------------------------------------------------------------"<<endl;
         for(auto i:Productlist){
-            cout<<" |   "<<i.first<<"   |  "<<i.second[0]<<"  |     "<<i.second[1]<<"   |  "<<i.second[2]<<"    |     "<<i.second[3]<<"      |"<<endl;
+           printf("  | %-10s | %-5s | %-8s | %-15s | %-10s |\n",i.first.c_str(),i.second[0].c_str(),i.second[1].c_str(),i.second[2].c_str(),i.second[3].c_str());
         }
+
     }
     void setDiscount(){
         string ProductId,Discount;
@@ -323,12 +340,14 @@ int main()
         freopen("Input.txt","r",stdin);
         freopen("Output.txt","w",stdout);
     #endif
+    GenerateProduct(n);
     Register r;
     Administrator ad;
     r.SignUp();
     r.Login();
     ad.addProduct();
     ad.PrintProductlist();
+    
 
 
     return 0;
