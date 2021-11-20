@@ -1,0 +1,43 @@
+ _____________________________________________
+|                                             |
+|          Welcome to ZepyShop                |
+|_____________________________________________|
+Enter 1 to SignUp or 2 to Login
+ENTER YOUR USER NAME    :
+Rahul Raj
+ENTER YOUR PASSWORD     :
+RahulopBolte
+ENTER YOUR EMAIL        :
+rahulop@huehue.com
+ENTER YOUR PHONE NUMBER :
+**********
+ENTER YOUR ADDRESS :
+ENTER YOUR BLOCK NO.     :
+420
+ENTER YOUR HOUSE NAME    :
+Rahulpepe
+ENTER YOUR CITY NAME     :
+Bihar
+ENTER YOUR POST CODE     :
+567901
+--------------------------------------
+Welcome to Login Portal
+ENTER YOUR USER NAME    :
+ENTER YOUR PASSWORD     :
+LOGIN SUCCESSFULLY
+--------------------------------------
+Enter Product Name : 
+P20212
+Enter Product Price : 
+100
+Enter Product Quantity : 
+11
+Enter Product Category : 
+wear
+Enter Product Discount : 
+10
+--------------------------------------
+Available Products In The Store
+ | Product Id | Price | Quantity | Category | Discount(%) |
+--------------------------------------------------------------
+ |   P20212   |  100  |     11   |  wear    |     10      |
