@@ -2,32 +2,31 @@
 #include <vector>
 #include <map>
 using namespace std;
-vector<pair<string,string> >AdminDetails;
-map<string,vector<string > >Productlist;
-int ProductIdCount=0;
-string ProductOriginId="P20210"; // to assign unique id to each product
-string Catg[]={"Electronics","Fashion","Food","Books","Sports","Others","Clothes","Shoes","Accessories"};
-int n=1000;
+vector<pair<string, string>> AdminDetails;
+map<string, vector<string>> Productlist;
+int ProductIdCount = 0;
+string ProductOriginId = "P20210"; // to assign unique id to each product
+string Catg[] = {"Electronics", "Fashion", "Food", "Books", "Sports", "Others", "Clothes", "Shoes", "Accessories"};
+int n = 1000;
 void GenerateProduct(int n)
 {
-     string ProductId,ProductPrice,ProductQuantity,ProductCategory,ProductDiscount;
-    for(int i=0;i<n;i++){
-        vector<string>Prod;
-         ProductId=ProductOriginId;
-         ProductId.append(to_string(ProductIdCount));
-         ProductIdCount++;
-         ProductPrice=to_string(rand()%1000);
-         ProductQuantity=to_string(rand()%100);
-         ProductCategory=Catg[rand()%9];
-         ProductDiscount=to_string(rand()%100);
-            Prod.push_back(ProductPrice);
-            Prod.push_back(ProductQuantity);
-            Prod.push_back(ProductCategory);
-            Prod.push_back(ProductDiscount);
-            Productlist[ProductId]=Prod;
-          
+    string ProductId, ProductPrice, ProductQuantity, ProductCategory, ProductDiscount;
+    for (int i = 0; i < n; i++)
+    {
+        vector<string> Prod;
+        ProductId = ProductOriginId;
+        ProductId.append(to_string(ProductIdCount));
+        ProductIdCount++;
+        ProductPrice = to_string(rand() % 1000);
+        ProductQuantity = to_string(rand() % 100);
+        ProductCategory = Catg[rand() % 9];
+        ProductDiscount = to_string(rand() % 100);
+        Prod.push_back(ProductPrice);
+        Prod.push_back(ProductQuantity);
+        Prod.push_back(ProductCategory);
+        Prod.push_back(ProductDiscount);
+        Productlist[ProductId] = Prod;
     }
-
 }
 class Address
 {
@@ -48,16 +47,16 @@ public:
     {
         cout << "ENTER YOUR BLOCK NO.     :\n";
         getline(cin, this->block);
-        cout<<block<<endl;
+        cout << block << endl;
         cout << "ENTER YOUR HOUSE NAME    :\n";
         getline(cin, this->houseName);
-        cout<<houseName<<endl;
+        cout << houseName << endl;
         cout << "ENTER YOUR CITY NAME     :\n";
         getline(cin, this->city);
-        cout<<city<<endl;
+        cout << city << endl;
         cout << "ENTER YOUR POST CODE     :\n";
         cin >> this->zip;
-        cout<<zip<<endl;
+        cout << zip << endl;
     }
 
     string getFullAddress()
@@ -208,23 +207,23 @@ public:
         {
             cout << "ENTER YOUR USER NAME    :" << endl;
             getline(cin, Username);
-            cout<<Username<<endl;
+            cout << Username << endl;
             cout << "ENTER YOUR PASSWORD     :" << endl;
             getline(cin, Password);
-            cout<<Password<<endl;
+            cout << Password << endl;
             cout << "ENTER YOUR EMAIL        :" << endl;
             getline(cin, Email);
-             cout<<Email<<endl;
+            cout << Email << endl;
             cout << "ENTER YOUR PHONE NUMBER :" << endl;
             getline(cin, Phone);
-            cout<<Phone<<endl;
-            cout<<"ENTER YOUR ADDRESS :"<<endl;
+            cout << Phone << endl;
+            cout << "ENTER YOUR ADDRESS :" << endl;
             setAddress();
-             cin.ignore();
+            cin.ignore();
         }
         else
         {
-           
+
             Login();
         }
     }
@@ -233,7 +232,7 @@ public:
     {
 
         string ChkUsername, ChkPassword;
-          cout <<"--------------------------------------\n";
+        cout << "--------------------------------------\n";
         cout << "Welcome to Login Portal\n";
         cout << "ENTER YOUR USER NAME    :" << endl;
         getline(cin, ChkUsername);
@@ -250,96 +249,105 @@ public:
         }
     }
 };
- class Administrator{
-   private:
-   string UserId;
+class Administrator
+{
+private:
+    string UserId;
     string Password;
-    public:
-    void setUserId(string userId){
-        this->UserId=userId;
+
+public:
+    void setUserId(string userId)
+    {
+        this->UserId = userId;
     }
-    void setPassword(string password){
-        this->Password=password;
+    void setPassword(string password)
+    {
+        this->Password = password;
     }
-    string getUserId(){
+    string getUserId()
+    {
         return UserId;
     }
-    string getPassword(){
+    string getPassword()
+    {
         return Password;
     }
-    void setAdminDetail(){
-        string LoginTime;   
-        cout<<"Enter your Login Time : \n";
-        cin>>LoginTime;
-        AdminDetails.push_back(make_pair(UserId,LoginTime));
+    void setAdminDetail()
+    {
+        string LoginTime;
+        cout << "Enter your Login Time : \n";
+        cin >> LoginTime;
+        AdminDetails.push_back(make_pair(UserId, LoginTime));
     }
-    void addProduct(){
-           cout <<"--------------------------------------\n";
+    void addProduct()
+    {
+        cout << "--------------------------------------\n";
         // New Product to add or Edit Existing product
-        string ProductId,ProductPrice,ProductQuantity,ProductCategory,ProductDiscount;
-        vector<string>Prod;
-        cout<<"Enter Product Name : \n";
-        ProductId=ProductOriginId;
+        string ProductId, ProductPrice, ProductQuantity, ProductCategory, ProductDiscount;
+        vector<string> Prod;
+        cout << "Enter Product Name : \n";
+        ProductId = ProductOriginId;
         ProductId.append(to_string(++ProductIdCount));
-        cout<<ProductId<<endl;
-        cout<<"Enter Product Price : \n";
-        cin>>ProductPrice;
-        cout<<ProductPrice<<endl;
+        cout << ProductId << endl;
+        cout << "Enter Product Price : \n";
+        cin >> ProductPrice;
+        cout << ProductPrice << endl;
         Prod.push_back(ProductPrice);
-        cout<<"Enter Product Quantity : \n";
-        cin>>ProductQuantity;
-        cout<<ProductQuantity<<endl;
+        cout << "Enter Product Quantity : \n";
+        cin >> ProductQuantity;
+        cout << ProductQuantity << endl;
         Prod.push_back(ProductQuantity);
-        cout<<"Enter Product Category : \n";
-        cin>>ProductCategory;
-        cout<<ProductCategory<<endl;
+        cout << "Enter Product Category : \n";
+        cin >> ProductCategory;
+        cout << ProductCategory << endl;
         Prod.push_back(ProductCategory);
-        cout<<"Enter Product Discount : \n";
-        cin>>ProductDiscount;
-        cout<<ProductDiscount<<endl;
+        cout << "Enter Product Discount : \n";
+        cin >> ProductDiscount;
+        cout << ProductDiscount << endl;
         Prod.push_back(ProductDiscount);
-        Productlist[ProductId]=Prod;
-
-      
+        Productlist[ProductId] = Prod;
     }
-    void PrintProductlist(){
-        cout<<"--------------------------------------\n";
-        cout<<"Available Products In The Store"<<endl;
-        cout<<"  | Product Id | Price | Quantity |  Category       | Discount(%)|"<<endl;
-    cout<<"--------------------------------------------------------------"<<endl;
-        for(auto i:Productlist){
-           printf("  | %-10s | %-5s | %-8s | %-15s | %-10s |\n",i.first.c_str(),i.second[0].c_str(),i.second[1].c_str(),i.second[2].c_str(),i.second[3].c_str());
+    void PrintProductlist()
+    {
+        cout << "--------------------------------------\n";
+        cout << "Available Products In The Store" << endl;
+        cout << "  | Product Id | Price | Quantity |  Category       | Discount(%)|" << endl;
+        cout << "--------------------------------------------------------------" << endl;
+        for (auto i : Productlist)
+        {
+            printf("  | %-10s | %-5s | %-8s | %-15s | %-10s |\n", i.first.c_str(), i.second[0].c_str(), i.second[1].c_str(), i.second[2].c_str(), i.second[3].c_str());
         }
-
     }
-    void setDiscount(){
-        string ProductId,Discount;
-        cout<<"Enter Product Id : \n";
-        cin>>ProductId;
-        cout<<ProductId<<endl;
-        cout<<"Enter Discount : \n";
-        cin>>Discount;
-        cout<<Discount<<endl;
-        Productlist[ProductId][3]=Discount;
+    void setDiscount()
+    {
+        string ProductId, Discount;
+        cout << "Enter Product Id : \n";
+        cin >> ProductId;
+        cout << ProductId << endl;
+        cout << "Enter Discount : \n";
+        cin >> Discount;
+        cout << Discount << endl;
+        Productlist[ProductId][3] = Discount;
     }
-    void searchProduct(){
+    void searchProduct()
+    {
         string ProductId;
-        cout<<"Enter Product Id : \n";
-        cin>>ProductId;
-        cout<<ProductId<<endl;
-        cout<<"Product Details\n";
-        cout<<"Product Id:"<<ProductId<<"\nProduct Price in Rs:"<<Productlist[ProductId][0]<<"\nProduct Quanity:"<<Productlist[ProductId][1]<<"\nProduct category:"<<Productlist[ProductId][2]<<"\nProduct Discount:"<<Productlist[ProductId][3]<<endl;
+        cout << "Enter Product Id : \n";
+        cin >> ProductId;
+        cout << ProductId << endl;
+        cout << "Product Details\n";
+        cout << "Product Id:" << ProductId << "\nProduct Price in Rs:" << Productlist[ProductId][0] << "\nProduct Quanity:" << Productlist[ProductId][1] << "\nProduct category:" << Productlist[ProductId][2] << "\nProduct Discount:" << Productlist[ProductId][3] << endl;
     }
- };
+};
 
 int main()
 {
-     ios_base::sync_with_stdio(false);
+    ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    #ifndef ONLINE_JUDGE
-        freopen("Input.txt","r",stdin);
-        freopen("Output.txt","w",stdout);
-    #endif
+#ifndef ONLINE_JUDGE
+    freopen("Input.txt", "r", stdin);
+    freopen("Output.txt", "w", stdout);
+#endif
     GenerateProduct(n);
     Register r;
     Administrator ad;
@@ -347,8 +355,99 @@ int main()
     r.Login();
     ad.addProduct();
     ad.PrintProductlist();
-    
-
 
     return 0;
 }
+
+// Alekhya code
+class product
+{
+private:
+    string productID;
+    string productName;
+    double productPrice;
+
+public:
+    Product(string ID = "", string Name = "", double Price = 0.0)
+    {
+        productID = ID;
+        productName = Name;
+        productPrice = Price;
+    }
+
+    void setID(string i)
+    {
+        productID = i;
+    }
+
+    void setNAME(string n)
+    {
+        productName = n;
+    }
+
+    void setPRICE(double p)
+    {
+        productPrice = p;
+    }
+
+    virtual string getID()
+    {
+        return productID;
+    }
+
+    string getNAME()
+    {
+        return productName;
+    }
+
+    double getPRICE()
+    {
+        return productPrice;
+    }
+
+    void displayProduct()
+    {
+
+        cout << setw(10) << productID << setw(20) << productName << setw(20) << productPrice << end1;
+    }
+};
+
+/= == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == = << ProductList Class >> == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == = /
+
+                                                                                                                                                                                                                                                                                                                   class ProductList // contain composition task (product class)
+{
+private:
+    vector<Product> productList;
+
+public:
+    void products(vector<Product> &p)
+    {
+        productList = p;
+    }
+
+    void displayProductList()
+    {
+        cout << setw(15) << "ProductID" << setw(17) << "ProductName" << setw(20) << "ProductPrice\n";
+        for (int i = 0; i < productList.size(); i++)
+        {
+            productList[i].displayProduct();
+        }
+    }
+    virtual void addProduct(string i, string n, double p)
+    {
+        productList.emplace_back(i, n, p);
+    }
+
+    void removeProduct(string r)
+    {
+        int RE;
+        for (int i = 0; i < productList.size(); i++)
+        {
+            if (productList(i).grtID() == r)
+            {
+                RE = i:
+            }
+        }
+        productList.erase(productList.begin() + RE);
+    }
+};
