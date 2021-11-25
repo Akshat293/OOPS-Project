@@ -1,0 +1,171 @@
+ _____________________________________________
+|                                             |
+|          Welcome to ZepyShop                |
+|_____________________________________________|
+Enter 1 to SignUp or 2 to Login
+ENTER YOUR USER NAME    :
+Rahul Raj
+ENTER YOUR PASSWORD     :
+RahulopBolte
+ENTER YOUR EMAIL        :
+rahulop@huehue.com
+ENTER YOUR PHONE NUMBER :
+**********
+ENTER YOUR ADDRESS :
+ENTER YOUR BLOCK NO.     :
+420
+ENTER YOUR HOUSE NAME    :
+Rahulpepe
+ENTER YOUR CITY NAME     :
+Bihar
+ENTER YOUR POST CODE     :
+567901
+--------------------------------------
+Welcome to Login Portal
+ENTER YOUR USER NAME    :
+ENTER YOUR PASSWORD     :
+LOGIN SUCCESSFULLY
+--------------------------------------
+Enter Product Name : 
+P20210101
+Enter Product Price : 
+100
+Enter Product Quantity : 
+119
+Enter Product Category : 
+Beauty
+Enter Product Discount : 
+107
+--------------------------------------
+Available Products In The Store
+  | Product Id | Price | Quantity |  Category       | Discount(%)|
+--------------------------------------------------------------
+  | P202100    | 807   | 49       | Others          | 58         |
+  | P202101    | 930   | 72       | Clothes         | 78         |
+  | P2021010   | 967   | 72       | Fashion         | 36         |
+  | P20210101  | 100   | 119      | Beauty          | 107        |
+  | P2021011   | 485   | 45       | Food            | 91         |
+  | P2021012   | 194   | 57       | Accessories     | 53         |
+  | P2021013   | 708   | 44       | Fashion         | 90         |
+  | P2021014   | 124   | 96       | Books           | 3          |
+  | P2021015   | 722   | 66       | Electronics     | 24         |
+  | P2021016   | 801   | 53       | Electronics     | 8          |
+  | P2021017   | 228   | 33       | Sports          | 81         |
+  | P2021018   | 635   | 13       | Clothes         | 14         |
+  | P2021019   | 63    | 36       | Others          | 69         |
+  | P202102    | 923   | 9        | Electronics     | 65         |
+  | P2021020   | 115   | 94       | Electronics     | 1          |
+  | P2021021   | 517   | 95       | Clothes         | 4          |
+  | P2021022   | 451   | 98       | Books           | 23         |
+  | P2021023   | 505   | 82       | Clothes         | 66         |
+  | P2021024   | 716   | 37       | Food            | 44         |
+  | P2021025   | 501   | 97       | Food            | 28         |
+  | P2021026   | 137   | 58       | Fashion         | 97         |
+  | P2021027   | 294   | 4        | Others          | 31         |
+  | P2021028   | 745   | 75       | Books           | 98         |
+  | P2021029   | 142   | 99       | Accessories     | 12         |
+  | P202103    | 492   | 42       | Electronics     | 3          |
+  | P2021030   | 260   | 57       | Clothes         | 8          |
+  | P2021031   | 395   | 68       | Others          | 30         |
+  | P2021032   | 6     | 62       | Shoes           | 65         |
+  | P2021033   | 82    | 52       | Fashion         | 21         |
+  | P2021034   | 695   | 12       | Clothes         | 1          |
+  | P2021035   | 590   | 31       | Others          | 57         |
+  | P2021036   | 616   | 90       | Others          | 79         |
+  | P2021037   | 335   | 6        | Accessories     | 98         |
+  | P2021038   | 95    | 19       | Books           | 23         |
+  | P2021039   | 289   | 60       | Fashion         | 26         |
+  | P202104    | 327   | 29       | Shoes           | 12         |
+  | P2021040   | 123   | 6        | Food            | 70         |
+  | P2021041   | 238   | 94       | Clothes         | 44         |
+  | P2021042   | 366   | 34       | Accessories     | 94         |
+  | P2021043   | 363   | 38       | Fashion         | 90         |
+  | P2021044   | 550   | 59       | Shoes           | 47         |
+  | P2021045   | 385   | 17       | Accessories     | 39         |
+  | P2021046   | 247   | 85       | Fashion         | 85         |
+  | P2021047   | 623   | 20       | Others          | 68         |
+  | P2021048   | 735   | 15       | Clothes         | 34         |
+  | P2021049   | 42    | 11       | Clothes         | 52         |
+  | P202105    | 303   | 69       | Electronics     | 57         |
+  | P2021050   | 244   | 95       | Accessories     | 96         |
+  | P2021051   | 692   | 15       | Shoes           | 33         |
+  | P2021052   | 669   | 97       | Books           | 47         |
+  | P2021053   | 825   | 10       | Accessories     | 11         |
+  | P2021054   | 808   | 77       | Shoes           | 25         |
+  | P2021055   | 335   | 68       | Others          | 76         |
+  | P2021056   | 767   | 39       | Sports          | 31         |
+  | P2021057   | 556   | 1        | Sports          | 60         |
+  | P2021058   | 94    | 84       | Accessories     | 89         |
+  | P2021059   | 407   | 15       | Fashion         | 69         |
+  | P202106    | 560   | 33       | Clothes         | 78         |
+  | P2021060   | 680   | 55       | Books           | 6          |
+  | P2021061   | 963   | 2        | Others          | 8          |
+  | P2021062   | 249   | 31       | Clothes         | 38         |
+  | P2021063   | 808   | 97       | Electronics     | 49         |
+  | P2021064   | 203   | 31       | Books           | 14         |
+  | P2021065   | 419   | 75       | Food            | 80         |
+  | P2021066   | 929   | 23       | Fashion         | 60         |
+  | P2021067   | 737   | 45       | Books           | 25         |
+  | P2021068   | 200   | 56       | Others          | 97         |
+  | P2021069   | 648   | 4        | Accessories     | 50         |
+  | P202107    | 816   | 35       | Shoes           | 26         |
+  | P2021070   | 976   | 12       | Sports          | 97         |
+  | P2021071   | 504   | 81       | Sports          | 65         |
+  | P2021072   | 378   | 99       | Books           | 29         |
+  | P2021073   | 553   | 83       | Others          | 7          |
+  | P2021074   | 773   | 22       | Clothes         | 76         |
+  | P2021075   | 53    | 24       | Shoes           | 66         |
+  | P2021076   | 400   | 44       | Food            | 85         |
+  | P2021077   | 16    | 98       | Clothes         | 33         |
+  | P2021078   | 557   | 76       | Food            | 66         |
+  | P2021079   | 357   | 11       | Others          | 14         |
+  | P202108    | 512   | 67       | Accessories     | 33         |
+  | P2021080   | 819   | 37       | Food            | 91         |
+  | P2021081   | 720   | 62       | Sports          | 97         |
+  | P2021082   | 31    | 88       | Clothes         | 73         |
+  | P2021083   | 877   | 4        | Electronics     | 0          |
+  | P2021084   | 254   | 60       | Sports          | 47         |
+  | P2021085   | 480   | 30       | Electronics     | 46         |
+  | P2021086   | 107   | 38       | Clothes         | 26         |
+  | P2021087   | 35    | 57       | Food            | 14         |
+  | P2021088   | 593   | 60       | Electronics     | 18         |
+  | P2021089   | 357   | 85       | Electronics     | 15         |
+  | P202109    | 979   | 49       | Electronics     | 21         |
+  | P2021090   | 563   | 2        | Shoes           | 43         |
+  | P2021091   | 419   | 67       | Books           | 69         |
+  | P2021092   | 395   | 3        | Electronics     | 3          |
+  | P2021093   | 748   | 85       | Food            | 59         |
+  | P2021094   | 406   | 30       | Others          | 32         |
+  | P2021095   | 973   | 3        | Clothes         | 20         |
+  | P2021096   | 950   | 31       | Shoes           | 3          |
+  | P2021097   | 900   | 20       | Books           | 58         |
+  | P2021098   | 3     | 76       | Fashion         | 34         |
+  | P2021099   | 780   | 79       | Accessories     | 74         |
+-----------------------------------------------------------------
+Enter the Product ID to Add the Cart
+P2021010
+The number of pieces of Product left is 72
+Enter the number of pieces of Product you want to add to the Cart
+2
+The number of pieces of Product left is 70
+--------------------------------------
+Product Id | Product Price | Product Quantity | Product Category | Product Discount |
+--------------------------------------------------------------
+  | P2021010   | 967   | 2        | Fashion         | 36         |
+---------------------------------------------------------------
+Total Amount : 1934
+Total Discount : 696
+Final Amount : 1238
+Enter the Product ID to Change the Quantity
+P2021010
+Enter the number of pieces of Product you want to add or remove  to the Cart
+-1
+The number of pieces of Product left is 1
+--------------------------------------
+Product Id | Product Price | Product Quantity | Product Category | Product Discount |
+--------------------------------------------------------------
+  | P2021010   | 967   | 1        | Fashion         | 36         |
+---------------------------------------------------------------
+Total Amount : 967
+Total Discount : 348
+Final Amount : 619
