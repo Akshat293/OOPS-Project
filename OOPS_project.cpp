@@ -7,10 +7,14 @@
 using namespace std;
 vector<pair<string, string> > AdminDetails;
 map<string, vector<string> > Productlist;
+map<string,string>UserDetails;
 int ProductIdCount = 0;
 string ProductOriginId = "P20210"; // to assign unique id to each product
 string Catg[] = {"Electronics", "Fashion", "Food", "Books", "Sports", "Others", "Clothes", "Shoes", "Accessories"};
+string User[] = {"AKshat", "Alekya", "Ashwani", "Abhinav", "Rahul", "Aditya", "Akansha", "Sreeja", "Kobsey"};
+string Password[] = {"P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8", "P9"};
 int n = 100;
+int n1 = 100;
 void GenerateProduct(int n)
 {
     string ProductId, ProductPrice, ProductQuantity, ProductCategory, ProductDiscount;
@@ -30,6 +34,10 @@ void GenerateProduct(int n)
         Prod.push_back(ProductDiscount);
         Productlist[ProductId] = Prod; /// map
     }
+}
+void GenerateUser(){
+    for(int i=0;i<100;i++)
+   UserDetails[User[rand() % 9]]=Password[rand() % 9];
 }
 class Address
 {
@@ -217,6 +225,7 @@ public:
         cin.ignore();
         if (num == 1)
         {
+            n1++;
             cout << "ENTER YOUR USER NAME    :" << endl;
             getline(cin, Username);
             cout << Username << endl;
@@ -231,6 +240,7 @@ public:
             cout << Phone << endl;
             cout << "ENTER YOUR ADDRESS :" << endl;
             setAddress();
+            UserDetails[Username]=Password;
             cin.ignore();
         }
         else
@@ -252,15 +262,17 @@ public:
         cout << "ENTER YOUR PASSWORD     :" << endl;
         getline(cin, ChkPassword);
         cout << ChkPassword << endl;
-
-        if (Username == ChkUsername && Password == ChkPassword)
+        for(int i=0;i<n1;i++){
+          if (UserDetails[ChkUsername]==ChkPassword)
         {
             cout << "LOGIN SUCCESSFULLY" << endl;
+            return;
         }
-        else
-        {
+        }
+        
+       
             cout << "LOGIN FAILED" << endl;
-        }
+        
     }
 };
 class Administrator
@@ -621,13 +633,14 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-#ifndef ONLINE_JUDGE
-    freopen("Input.txt", "r", stdin);
-    freopen("Output.txt", "w", stdout);
-#endif
+// #ifndef ONLINE_JUDGE
+//     freopen("Input.txt", "r", stdin);
+//     freopen("Output.txt", "w", stdout);
+// #endif
     GenerateProduct(n);
     Register r;
     Administrator ad;
+    //UserDetails["Akshat1"]="yes";
     r.SignUp();
     r.Login();
     ad.addProduct();
