@@ -6,6 +6,7 @@
 #include <map>
 using namespace std;
 vector<pair<string, string> > AdminDetails;
+
 map<string, vector<string> > Productlist;
 map<string,string>UserDetails;
 int ProductIdCount = 0;
